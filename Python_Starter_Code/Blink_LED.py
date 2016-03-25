@@ -7,8 +7,8 @@ GPIO.setup(38, GPIO.OUT)
 GPIO.setup(36, GPIO.OUT)
 
 
-def Blink_Tri(switch_mode):
-    if switch_mode == False:
+def Blink_Tri():
+    while True:
         x = 1
         for x in range (1,10):
             GPIO.output(40,True)
@@ -36,3 +36,5 @@ def Blink_Tri(switch_mode):
     GPIO.output(36,False)
 
     return;
+
+Blink_Tri()
