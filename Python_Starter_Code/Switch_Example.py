@@ -17,8 +17,7 @@ def Start_Code():
         elif input_state == True:
             print('Off')
             time.sleep(0.2)
-
-        Blink_Tri(input_state)
-    return;
+        Blink_Tri(input_state)    
+    return input_state;
 
 Start_Code()
