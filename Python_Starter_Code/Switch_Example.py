@@ -26,10 +26,10 @@ def Start_Code():
         while input_state == True:
             input_state = GPIO.input(12)
             GPIO.output(40,True)
-            time.sleep(0.2)
+            time.sleep(0.5)
             input_state = GPIO.input(12)
             GPIO.output(40,False)
-            time.sleep(0.2)
+            time.sleep(0.5)
 
             if running == 1:
                 print('Off')
