@@ -15,9 +15,8 @@ def Blink_Tri():
         time.sleep(0.2)
         x += 1
     GPIO.output(38,False)
-    while True:
-        GPIO.output(38,True)
-        time.sleep(1)
+
+    GPIO.output(38,True)
 
     return;
 
