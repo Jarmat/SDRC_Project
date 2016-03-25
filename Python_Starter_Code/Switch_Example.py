@@ -20,6 +20,9 @@ def Start_Code():
             print('Off')
             os.killpg(blink_proc.pid, signal.SIGTERM)
             blink_proc = None
+            GPIO.output(40,False)
+            GPIO.output(38,False)
+            GPIO.output(36,False)
             time.sleep(0.2)
             running = 0
     return;
