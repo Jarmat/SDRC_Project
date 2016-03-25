@@ -4,6 +4,7 @@ import signal
 import subprocess
 import os
 
+GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(12,GPIO.IN,pull_up_down=GPIO.PUD_UP)
 GPIO.setup(40, GPIO.OUT)
@@ -23,6 +24,7 @@ def Start_Code():
             input_state = GPIO.input(12)
             GPIO.output(40,True)
             time.sleep(0.2)
+            input_state = GPIO.input(12)
             GPIO.output(40,False)
             time.sleep(0.2)
 
@@ -34,14 +36,7 @@ def Start_Code():
                 GPIO.output(40,False)
                 GPIO.output(38,False)
                 GPIO.output(36,False)
-
-                GPIO.cleanup()
-                GPIO.setmode(GPIO.BOARD)
-
-                GPIO.setup(12,GPIO.IN,pull_up_down=GPIO.PUD_UP)
-                GPIO.setup(40, GPIO.OUT)
                 running = 0
-
 
     return;
 
