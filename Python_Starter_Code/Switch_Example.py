@@ -22,7 +22,6 @@ def Start_Code():
             blink_proc = None
             time.sleep(0.2)
             running = 0
-        Blink_Tri(input_state)
     return;
 
 Start_Code()
