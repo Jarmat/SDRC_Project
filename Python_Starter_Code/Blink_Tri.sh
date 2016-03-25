@@ -1,2 +1,2 @@
 #! /bin/zsh
-python Blink_Tri.py
+python Blink_LED.py
