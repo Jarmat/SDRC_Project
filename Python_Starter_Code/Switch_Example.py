@@ -20,7 +20,7 @@ def Start_Code():
             time.sleep(0.2)
             running = 1
         while input_state == True:
-
+            input_state = GPIO.input(12)
             GPIO.output(40,True)
             time.sleep(0.2)
             GPIO.output(40,False)
