@@ -2,10 +2,26 @@ import RPi.GPIO as GPIO
 import time
 
 GPIO.setmode(GPIO.BOARD) # select the GPIO numbering scheme to use
-GPIO.setup(13, GPIO.OUT)
+GPIO.setup(40, GPIO.OUT)
+GPIO.setup(38, GPIO.OUT)
+GPIO.setup(36, GPIO.OUT)
 
 while True:
-    GPIO.output(13,True)
-    time.sleep(1)
-    GPIO.output(13,False)
-    time.sleep(1)
+    x = 1
+    for x in range (1,10)
+        GPIO.output(40,True)
+        time.sleep(0.2)
+        x += 1
+
+    x = 1
+    for x in range (1,10)
+        GPIO.output(38,True)
+        time.sleep(0.2)
+        x += 1
+
+
+    x = 1
+    for x in range (1,10)
+        GPIO.output(36,True)
+        time.sleep(0.2)
+        x += 1
