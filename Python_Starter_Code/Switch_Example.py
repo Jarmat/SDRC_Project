@@ -13,6 +13,9 @@ GPIO.setup(36, GPIO.OUT)
 
 def Start_Code():
     running = 0
+    GPIO.output(40,False)
+    GPIO.output(38,False)
+    GPIO.output(36,False)
     while True:
         input_state = GPIO.input(12)
         if input_state == False and running == 0:
