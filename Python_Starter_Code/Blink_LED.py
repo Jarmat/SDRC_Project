@@ -1,7 +1,11 @@
 import RPi.GPIO as GPIO
 import time
 
+GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD) # select the GPIO numbering scheme to use
+GPIO.setup(40, GPIO.OUT)
+GPIO.setup(38, GPIO.OUT)
+GPIO.setup(36, GPIO.OUT)
 
 def Blink_Tri():
     while True:

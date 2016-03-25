@@ -4,6 +4,7 @@ import signal
 import subprocess
 import os
 
+GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(12,GPIO.IN,pull_up_down=GPIO.PUD_UP)
 GPIO.setup(40, GPIO.OUT)
