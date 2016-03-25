@@ -6,6 +6,9 @@ import os
 
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(12,GPIO.IN,pull_up_down=GPIO.PUD_UP)
+GPIO.setup(40, GPIO.OUT)
+GPIO.setup(38, GPIO.OUT)
+GPIO.setup(36, GPIO.OUT)
 
 def Start_Code():
     running = 0
