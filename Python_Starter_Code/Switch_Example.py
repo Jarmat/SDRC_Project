@@ -21,4 +21,4 @@ def Start_Code():
         Blink_Tri(input_state)
     return;
 
-Start_Code
+Start_Code()
