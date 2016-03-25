@@ -1,20 +1,24 @@
 import RPi.GPIO as GPIO
 import time
-import subprocess
+import Blink_LED
 
-from subprocess import Popen
+from Blink_LED import Blink_Tri
 
 GPIO.setmode(GPIO.BOARD)
 
 GPIO.setup(12,GPIO.IN,pull_up_down=GPIO.PUD_UP)
 
-while True:
-    input_state = GPIO.input(12)
-    if input_state == False:
-        print('On')
-        time.sleep(0.2)
-        process = Popen(["Blink", "Blink_LED.py"])
-    elif input_state == True:
-        print('Off')
-        time.sleep(0.2)
-        process = Popen.kill(["Blink", "Blink_LED.py"])
+def Start_Code():
+    while True:
+        input_state = GPIO.input(12)
+        if input_state == False:
+            print('On')
+            time.sleep(0.2)
+        elif input_state == True:
+            print('Off')
+            time.sleep(0.2)
+
+        Blink_Tri(input_state)
+    return;
+
+Start_Code
