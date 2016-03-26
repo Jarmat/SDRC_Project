@@ -15,6 +15,7 @@ def Start_Code():
     while True:
         input_state = GPIO.input(12)
         if input_state == False and running == 0:
+            GPIO.output(40,False)
             print('On')
             blink_proc = subprocess.Popen("/home/pi/Self_Driving_Car_Project/SDRC_Project/SDRC_Project/Python_Starter_Code/Blink_Tri.sh", shell=True, preexec_fn=os.setsid)
             time.sleep(0.2)
@@ -40,6 +41,9 @@ def Start_Code():
 
                 GPIO.setup(12,GPIO.IN,pull_up_down=GPIO.PUD_UP)
                 GPIO.setup(40, GPIO.OUT)
+                GPIO.setup(38, GPIO.OUT)
+                GPIO.setup(36, GPIO.OUT)
+
                 GPIO.output(38,False)
                 GPIO.output(36,False)
                 running = 0
