@@ -21,7 +21,7 @@ def Blink_Red():
     GPIO.output(40,False)
     time.sleep(0.5)
 
-    return:
+    return;
 
 def Start_Code():
     running = 0
