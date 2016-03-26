@@ -10,6 +10,19 @@ GPIO.setup(40, GPIO.OUT)
 GPIO.setup(38, GPIO.OUT)
 GPIO.setup(36, GPIO.OUT)
 
+def my_callback(channel):
+    input_state = GPIO.input(12)
+
+    return input_state;
+
+def Blink_Red():
+    GPIO.output(40,True)
+    time.sleep(0.5)
+    GPIO.output(40,False)
+    time.sleep(0.5)
+
+    return:
+
 def Start_Code():
     running = 0
     while True:
@@ -42,12 +55,8 @@ def Start_Code():
                 GPIO.output(36,False)
                 running = 0
 
-            input_state = GPIO.input(12)
-            GPIO.output(40,True)
-            time.sleep(0.5)
-            nput_state = GPIO.input(12)
-            GPIO.output(40,False)
-            time.sleep(0.5)
+            input_state = GPIO.add_event_detect(12, GPIO.FALLING, callback=my_callback)
+            Blink_Red()
 
     return;
 
