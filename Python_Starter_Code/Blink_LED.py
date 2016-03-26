@@ -20,4 +20,11 @@ def Blink_Tri():
 
     return;
 
+def Launch_Car():
+
+    print("Start Car...")
+
+    return;
+
 Blink_Tri()
+Launch_Car()
