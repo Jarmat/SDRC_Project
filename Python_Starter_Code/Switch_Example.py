@@ -41,18 +41,17 @@ def Start_Code():
                 GPIO.output(38,False)
                 GPIO.output(36,False)
                 running = 0
-                
+
             input_state = GPIO.input(12)
             GPIO.output(40,True)
-            time.sleep(0.2)
+            time.sleep(0.5)
             nput_state = GPIO.input(12)
             GPIO.output(40,False)
-            time.sleep(0.2)
-
-
-
+            time.sleep(0.5)
 
     return;
+
+
 
 try:
     Start_Code()
