@@ -49,7 +49,7 @@ def sense(p, colors, measurement,sensor_right):
     total_rows = len(p)
     total_cols = len(p[0])
     s = 0
-    
+
     for row in range(total_rows):
         for col in range(total_cols):
             hit = (measurement == colors[row][col])
