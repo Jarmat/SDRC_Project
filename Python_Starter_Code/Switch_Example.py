@@ -43,20 +43,16 @@ def Start_Code():
                 os.killpg(blink_proc.pid, signal.SIGTERM)
                 blink_proc = None
 
-                GPIO.cleanup()
-                GPIO.setmode(GPIO.BOARD)
-
-                GPIO.setup(12,GPIO.IN,pull_up_down=GPIO.PUD_UP)
-                GPIO.setup(40, GPIO.OUT)
-                GPIO.setup(38, GPIO.OUT)
-                GPIO.setup(36, GPIO.OUT)
-
-                GPIO.output(38,False)
-                GPIO.output(36,False)
                 running = 0
 
-            input_state = GPIO.add_event_detect(12, GPIO.FALLING, callback=my_callback)
-            Blink_Red()
+            input_state = GPIO.input(12)
+            GPIO.output(40,True)
+            time.sleep(0.5)
+            input_state = GPIO.input(12)
+            GPIO.output(40,False)
+            time.sleep(0.5)
+            input_state = GPIO.input(12)
+            
 
     return;
 
