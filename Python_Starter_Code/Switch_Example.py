@@ -23,9 +23,8 @@ def Blink_Red():
 
     return;
 
-def Start_Code(my_input_state):
+def Start_Code():
     running = 0
-
     while True:
         input_state = GPIO.input(12)
         if input_state == False and running == 0:
@@ -56,14 +55,14 @@ def Start_Code(my_input_state):
                 GPIO.output(36,False)
                 running = 0
 
+            input_state = GPIO.add_event_detect(12, GPIO.FALLING, callback=my_callback)
             Blink_Red()
 
     return;
 
-my_input_state = GPIO.add_event_detect(12, GPIO.FALLING, callback=my_callback)
 
 
 try:
-    Start_Code(my_input_state)
+    Start_Code()
 except KeyboardInterrupt:
     GPIO.cleanup()
