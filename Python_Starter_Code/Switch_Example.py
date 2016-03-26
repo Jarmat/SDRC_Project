@@ -41,12 +41,20 @@ def Blink_Red():
     time.sleep(0.5)
 
     return;
-#
-# GPIO.add_event_detect(12, GPIO.RISING, callback=Blink_Red)
-GPIO.add_event_detect(12, GPIO.FALLING, callback=Blink_Tri)
+
+
+def my_callback(channel):
+    if GPIO.input(12):
+        Blink_Tri()
+    else:
+        Blink_Red()
+
+    return;
+
+GPIO.add_event_detect(12, GPIO.BOTH, callback=my_callback)
+
 try:
     while True:
-        Blink_Red()
         time.sleep(0.2)
 
 except KeyboardInterrupt:
