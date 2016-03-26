@@ -25,6 +25,7 @@ def Blink_Red():
 
 def Start_Code():
     running = 0
+    input_state = GPIO.add_event_detect(12, GPIO.FALLING, callback=my_callback)
     while True:
         input_state = GPIO.input(12)
         if input_state == False and running == 0:
@@ -54,8 +55,7 @@ def Start_Code():
                 GPIO.output(38,False)
                 GPIO.output(36,False)
                 running = 0
-
-            input_state = GPIO.add_event_detect(12, GPIO.FALLING, callback=my_callback)
+                
             Blink_Red()
 
     return;
