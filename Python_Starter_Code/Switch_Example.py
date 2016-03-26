@@ -42,9 +42,12 @@ def Blink_Red():
 
     return;
 
+GPIO.wait_for_edge(12, GPIO.RISING, callback=Blink_Red())
+GPIO.wait_for_edge(12, GPIO.FALLING, callback=Blink_Tri())
 try:
-    GPIO.wait_for_edge(12, GPIO.FALLING, callback=Blink_Tri())
-    GPIO.wait_for_edge(12, GPIO.RISING, callback=Blink_Red())
+    while True:
+        time.sleep(0.2)
+
 except KeyboardInterrupt:
     GPIO.cleanup()
 
