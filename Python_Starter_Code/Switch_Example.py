@@ -42,8 +42,8 @@ def Blink_Red():
 
     return;
 
-GPIO.wait_for_edge(12, GPIO.RISING, callback=Blink_Red())
-GPIO.wait_for_edge(12, GPIO.FALLING, callback=Blink_Tri())
+GPIO.add_event_detect(12, GPIO.RISING, callback=Blink_Red())
+GPIO.add_event_detect(12, GPIO.FALLING, callback=Blink_Tri())
 try:
     while True:
         time.sleep(0.2)
