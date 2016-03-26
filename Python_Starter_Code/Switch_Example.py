@@ -17,7 +17,7 @@ GPIO.output(40,False)
 GPIO.output(38,False)
 GPIO.output(36,False)
 
-def Blink_Tri(channel):
+def Blink_Tri():
     x = 1
     for x in range (1,10):
         GPIO.output(36,True)
