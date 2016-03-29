@@ -3,9 +3,9 @@ import time
 
 GPIO.setmode(GPIO.BOARD) # select the GPIO numbering scheme to use.
 
-GPIO.setup(18, GPIO.OUT)
+GPIO.setup(12, GPIO.OUT)
 
-pwm_obj = GPIO.PWM(18, 50) #Sets pin 18 as a PWM output at 50 Hz.
+pwm_obj = GPIO.PWM(12, 50) #Sets pin 18 as a PWM output at 50 Hz.
 
 pwm_obj.start(100) #Starts the PWM with a duty cycle of 100 (Duty cycle ranges between 0 and 10).
 
@@ -28,5 +28,5 @@ def TurnRight(ts):
 def TurnStraight(ts):
     pwm_obj.ChangeDutyCycle(8.5)
 
-TunrLeft(0.2)
+TurnLeft(0.2)
 TurnRight(0.2)
