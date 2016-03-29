@@ -39,11 +39,11 @@ def Clean():
 
 
 for x in range (5):
-    Forward(0.2,20)
+    Forward(1,20)
 
-Stop(0.2)
+Stop(1)
 
 for x in range(5):
-    Reverse(0.2,20)
+    Reverse(1,20)
 
 Clean()
