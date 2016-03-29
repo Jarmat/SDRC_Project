@@ -8,6 +8,8 @@ def init():
     GPIO.setup(33, GPIO.OUT)
     pwm_29 = GPIO.PWM(29, 100)
     pwm_31 = GPIO.PWM(31, 100)
+    pwm_29.start(0)
+    pwm_31.start(0)
     GPIO.output(33, True)
 
 def Forward(ts,velocity):
