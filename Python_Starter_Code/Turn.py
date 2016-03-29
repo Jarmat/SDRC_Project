@@ -14,7 +14,7 @@ def TurnLeft(ts):
     return;
 
 def TurnRight(ts):
-    pwm_obj.ChangeDutyCycle(4)
+    pwm_obj.ChangeDutyCycle(1.5)
     time.sleep(ts)
 
     return;
@@ -35,5 +35,13 @@ TurnLeft(1)
 TurnStraight(1)
 TurnRight(1)
 TurnStraight(1)
+=======
+
+TurnStraight(2)
+TurnLeft(2)
+TurnStraight(2)
+TurnRight(2)
+TurnStraight(2)
+>>>>>>> 0a5943904fca80b943389969e1579abaecff9348
 
 Clean()
