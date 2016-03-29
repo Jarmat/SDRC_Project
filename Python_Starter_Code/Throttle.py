@@ -31,12 +31,12 @@ def Clean():
 
 init()
 
-for x in range (1:5):
+for x in range (5):
     Forward(0.2,20)
 
 Stop(0.2)
 
-for x in range(1:5):
+for x in range(5):
     Reverse(0.2,10)
 
 Clean()
