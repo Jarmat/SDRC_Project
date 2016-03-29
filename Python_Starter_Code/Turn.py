@@ -23,7 +23,7 @@ def TurnStraight(ts):
     pwm_obj.ChangeDutyCycle(9)
 
 def Clean():
-    pwm_12.stop()
+    pwm_obj.stop()
     GPIO.cleanup()
 
 TurnLeft(1)
