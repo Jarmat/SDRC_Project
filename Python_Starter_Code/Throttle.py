@@ -11,25 +11,33 @@ def init():
     pwm_29.start(0)
     pwm_31.start(0)
     GPIO.output(33, True)
+    return;
 
 def Forward(ts,velocity):
     pwm_31.ChangeDutyCycle(velocity)
     time.sleep(ts)
+    return;
+
 
 
 def Reverse(ts,velocity):
     pwm_29.ChangeDutyCycle(velocity)
     time.sleep(ts)
+    return;
 
 def Stop(ts):
     GPIO.output(33, False)
     pwm_29.ChangeDutyCycle(0)
     pwm_31.ChangeDutyCycle(0)
+    return;
 
 def Clean():
     pwm_29.stop()
     pwm_31.stop()
     GPIO.cleanup()
+    return;
+
+
 
 init()
 
