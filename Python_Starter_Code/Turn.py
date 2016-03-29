@@ -31,10 +31,10 @@ def Clean():
 
     return;
 
-TurnLeft(1)
-TurnStraight(1)
-TurnRight(1)
-TurnStraight(1)
+TurnLeft(2)
+TurnStraight(2)
+TurnRight(2)
+TurnStraight(2)
 
 
 Clean()
