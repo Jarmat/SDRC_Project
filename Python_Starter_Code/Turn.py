@@ -21,10 +21,15 @@ def TurnRight(ts):
 
 def TurnStraight(ts):
     pwm_obj.ChangeDutyCycle(9)
+    time.sleep(ts)
+
+    return;
 
 def Clean():
     pwm_obj.stop()
     GPIO.cleanup()
+
+    return;
 
 TurnLeft(1)
 TurnStraight(1)
