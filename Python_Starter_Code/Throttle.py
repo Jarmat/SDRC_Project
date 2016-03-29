@@ -44,6 +44,6 @@ for x in range (5):
 Stop(0.2)
 
 for x in range(5):
-    Reverse(0.2,10)
+    Reverse(0.2,20)
 
 Clean()
