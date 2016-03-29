@@ -1,17 +1,17 @@
 import RPi.GPIO as GPIO
 import time
 
-def init():
-    GPIO.setmode(GPIO.BOARD) # select the GPIO numbering scheme to use.
-    GPIO.setup(29, GPIO.OUT)
-    GPIO.setup(31, GPIO.OUT)
-    GPIO.setup(33, GPIO.OUT)
-    pwm_29 = GPIO.PWM(29, 100)
-    pwm_31 = GPIO.PWM(31, 100)
-    pwm_29.start(0)
-    pwm_31.start(0)
-    GPIO.output(33, True)
-    return;
+# def init():
+GPIO.setmode(GPIO.BOARD) # select the GPIO numbering scheme to use.
+GPIO.setup(29, GPIO.OUT)
+GPIO.setup(31, GPIO.OUT)
+GPIO.setup(33, GPIO.OUT)
+pwm_29 = GPIO.PWM(29, 100)
+pwm_31 = GPIO.PWM(31, 100)
+pwm_29.start(0)
+pwm_31.start(0)
+GPIO.output(33, True)
+    # return;
 
 def Forward(ts,velocity):
     pwm_31.ChangeDutyCycle(velocity)
@@ -39,7 +39,7 @@ def Clean():
 
 
 
-init()
+# init()
 
 for x in range (5):
     Forward(0.2,20)
