@@ -1,11 +1,11 @@
 import RPi.GPIO as GPIO
 import time
 
-def init():
-    GPIO.setmode(GPIO.BOARD) # select the GPIO numbering scheme to use.
-    GPIO.setup(12, GPIO.OUT)
-    pwm_obj = GPIO.PWM(12, 50) #Sets pin 18 as a PWM output at 50 Hz.
-    pwm_obj.start(0) #Starts the PWM with a duty cycle of 100 (Duty cycle ranges between 0 and 10).
+
+GPIO.setmode(GPIO.BOARD) # select the GPIO numbering scheme to use.
+GPIO.setup(12, GPIO.OUT)
+pwm_obj = GPIO.PWM(12, 50) #Sets pin 18 as a PWM output at 50 Hz.
+pwm_obj.start(0) #Starts the PWM with a duty cycle of 100 (Duty cycle ranges between 0 and 10).
 
 def TurnLeft(ts):
     pwm_obj.ChangeDutyCycle(12)
