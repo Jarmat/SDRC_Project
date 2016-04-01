@@ -1,10 +1,13 @@
 import RPi.GPIO as GPIO
 import time
 
-def DistanceSense(units):
+def Ultrasonic_Init():
     GPIO.setmode(GPIO.BOARD)
     GPIO.setup(35, GPIO.IN)
     GPIO.setup(37, GPIO.OUT)
+    return;
+
+def DistanceSense(units):
 
     GPIO.output(37, False)
 
@@ -23,7 +26,5 @@ def DistanceSense(units):
     else:
         print('Use either cm or in for units.')
         distance = None
-
-    GPIO.cleanup()
 
     return distance;

@@ -1,6 +1,8 @@
 import RPi.GPIO as GPIO
 import time
 
+from Move_and_Sense_Script import Launch_Car
+
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD) # select the GPIO numbering scheme to use
 GPIO.setup(38, GPIO.OUT)

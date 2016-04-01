@@ -5,7 +5,7 @@ import subprocess
 import os
 
 GPIO.setmode(GPIO.BOARD)
-GPIO.setup(12,GPIO.IN,pull_up_down=GPIO.PUD_UP)
+GPIO.setup(32,GPIO.IN,pull_up_down=GPIO.PUD_UP)
 GPIO.setup(40, GPIO.OUT)
 GPIO.setup(38, GPIO.OUT)
 GPIO.setup(36, GPIO.OUT)
@@ -26,7 +26,7 @@ def Blink_Red():
 def Start_Code():
     running = 0
     while True:
-        input_state = GPIO.input(12)
+        input_state = GPIO.input(32)
         if input_state == False and running == 0:
             GPIO.output(40,False)
             print('On')
@@ -47,13 +47,13 @@ def Start_Code():
 
                 running = 0
 
-            input_state = GPIO.input(12)
+            input_state = GPIO.input(32)
             GPIO.output(40,True)
             time.sleep(0.5)
-            input_state = GPIO.input(12)
+            input_state = GPIO.input(32)
             GPIO.output(40,False)
             time.sleep(0.5)
-            input_state = GPIO.input(12)
+            input_state = GPIO.input(32)
 
 
     return;
