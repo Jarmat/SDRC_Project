@@ -22,6 +22,7 @@ pwm_12.start(0) #Starts the PWM with a duty cycle of 100 (Duty cycle ranges betw
 def Launch_Car():
 
     ts = 0.02
+    velocity = 30
     time.sleep(0.02)
 
     while True:
@@ -39,12 +40,13 @@ def Launch_Car():
             steps += 1
             Stop(pwm29,pwm31,ts)
             TurnRight(pwm_12,ts)
-            Reverse(pwm31,1,20)
+            Reverse(pwm31,1,velocity)
             TurnLeft(pwm_12,ts)
-            Forward(pwm29,1,20)
+            Forward(pwm29,1,velocity)
             Stop(pwm29,pwm31,ts)
             TurnStraight(pwm_12,ts)
             distance = DistanceSense('cm')
+            time.sleep(ts)
             if steps > 4:
                 print "I'm stuck!  Exiting code..."
                 break
@@ -53,7 +55,7 @@ def Launch_Car():
             break
 
         while distance > 30:
-            Forward(pwm29,ts, 20)
+            Forward(pwm29,ts, velocity)
             distance = DistanceSense('cm')
 
 
