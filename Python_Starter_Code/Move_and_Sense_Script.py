@@ -42,7 +42,7 @@ def Launch_Car():
             Reverse(pwm31,0.5,15)
             TurnLeft(pwm_12,ts)
             Forward(pwm29,0.5,15)
-            Stop(ts)
+            Stop(pwm29,pwm31,ts)
             TurnStraight(pwm_12,ts)
             distance = DistanceSense('cm')
             if steps > 4:
