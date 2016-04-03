@@ -2,7 +2,7 @@ import RPi.GPIO as GPIO
 import time
 
 from Throttle import Forward, Reverse, Stop, Throttle_Init
-from Ultrasonic import DistanceSense, Ultrasonic_Init
+from UltraSonic import DistanceSense, Ultrasonic_Initgit
 from Turn import TurnRight, TurnLeft, TurnStraight, Turn_Init, Turn_Clean
 
 def Launch_Car():
@@ -47,5 +47,5 @@ def Launch_Car():
     Throttle_Clean()
     Turn_Clean()
     GPIO.cleanup()
-    
+
     return;
