@@ -12,12 +12,12 @@ pwm31.start(0)
 GPIO.output(33, True)
 
 def Forward(ts,velocity):
-    pwm31.ChangeDutyCycle(velocity)
+    pwm29.ChangeDutyCycle(velocity)
     time.sleep(ts)
     return;
 
 def Reverse(ts,velocity):
-    pwm29.ChangeDutyCycle(velocity)
+    pwm31.ChangeDutyCycle(velocity)
     time.sleep(ts)
     return;
 
