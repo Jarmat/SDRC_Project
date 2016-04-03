@@ -21,8 +21,10 @@ def DistanceSense(units):
 
     if units == 'cm':
         distance = tl/0.000058
+        print 'Distancs is ' distance
     elif units == 'in':
         distance = tl/0.000148
+        print 'Distancs is ', distance
     else:
         print('Use either cm or in for units.')
         distance = None
