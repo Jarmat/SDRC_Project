@@ -36,7 +36,7 @@ def Launch_Car():
 
         steps = 0
 
-        while distance < 5:
+        while distance < 50:
             steps += 1
             Stop(pwm29,pwm31,ts)
             TurnRight(pwm_12,ts)
