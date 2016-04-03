@@ -22,10 +22,8 @@ def Reverse(pwm31,ts,velocity):
     return;
 
 def Stop(pwm29,pwm31,ts):
-    GPIO.output(33, False)
     pwm29.ChangeDutyCycle(0)
     pwm31.ChangeDutyCycle(0)
-    GPIO.output(33, True)
     time.sleep(ts)
     return;
 
