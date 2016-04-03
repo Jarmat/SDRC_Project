@@ -1,9 +1,9 @@
 import RPi.GPIO as GPIO
 import time
 
-from Throttle import Forward, Reverse, Stop, Throttle_Init
-from UltraSonic import DistanceSense, Ultrasonic_Init
-from Turn import TurnRight, TurnLeft, TurnStraight, Turn_Init, Turn_Clean
+from Throttle import Forward, Reverse, Stop
+from UltraSonic import DistanceSense
+from Turn import TurnRight, TurnLeft, TurnStraight, Turn_Clean
 
 GPIO.setmode(GPIO.BOARD) # select the GPIO numbering scheme to use.
 GPIO.setup(29, GPIO.OUT)
