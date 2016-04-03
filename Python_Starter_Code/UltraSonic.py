@@ -37,8 +37,6 @@ def DistanceSense(units):
         print('Use either cm or in for units.')
         distance = None
 
-    GPIO.cleanup()
-
     return distance;
 
 print DistanceSense('cm')
