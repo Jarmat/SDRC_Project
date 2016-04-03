@@ -5,13 +5,14 @@ def Ultrasonic_Init():
     GPIO.setmode(GPIO.BOARD)
     GPIO.setup(35, GPIO.IN)
     GPIO.setup(37, GPIO.OUT)
+    GPIO.output(37, False)
     return;
 
 def DistanceSense(units):
 
     print units
 
-    GPIO.output(37, False)
+
 
     while GPIO.input(35) == 0:
         nosig = time.time()
