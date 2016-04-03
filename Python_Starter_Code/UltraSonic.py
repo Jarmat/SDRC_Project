@@ -9,12 +9,14 @@ def Ultrasonic_Init():
 
 def DistanceSense(units):
 
+    print units
+
     GPIO.output(37, False)
 
-    while GPIO.input(37) == 0:
+    if GPIO.input(37) == 0:
         nosig = time.time()
 
-    while GPIO.input(37) == 1:
+    if GPIO.input(37) == 1:
         sig = time.time()
 
     tl = sig - nosig
@@ -30,3 +32,6 @@ def DistanceSense(units):
         distance = None
 
     return distance;
+
+Ultrasonic_Init()
+DistanceSense('cm')
