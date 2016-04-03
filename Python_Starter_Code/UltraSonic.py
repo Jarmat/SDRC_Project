@@ -13,6 +13,8 @@ def DistanceSense(units):
     GPIO.setup(37, GPIO.OUT)
     print units
 
+    time.sleep(0.02)
+
     GPIO.output(37, True)
 
     time.sleep(0.00001)
@@ -40,3 +42,4 @@ def DistanceSense(units):
     return distance;
 
 print DistanceSense('cm')
+GPIO.cleanup()
