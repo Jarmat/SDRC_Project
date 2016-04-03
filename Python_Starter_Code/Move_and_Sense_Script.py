@@ -22,7 +22,7 @@ pwm_12.start(0) #Starts the PWM with a duty cycle of 100 (Duty cycle ranges betw
 def Launch_Car():
 
     ts = 0.02
-    velocity = 30
+    velocity = 50
     time.sleep(0.02)
 
     while True:
