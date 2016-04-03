@@ -5,20 +5,22 @@ from Throttle import Forward, Reverse, Stop, Throttle_Init
 from UltraSonic import DistanceSense, Ultrasonic_Init
 from Turn import TurnRight, TurnLeft, TurnStraight, Turn_Init, Turn_Clean
 
+GPIO.setmode(GPIO.BOARD) # select the GPIO numbering scheme to use.
+GPIO.setup(29, GPIO.OUT)
+GPIO.setup(31, GPIO.OUT)
+GPIO.setup(33, GPIO.OUT)
+pwm29 = GPIO.PWM(29, 100)
+pwm31 = GPIO.PWM(31, 100)
+pwm29.start(0)
+pwm31.start(0)
+GPIO.output(33, True)
+GPIO.setmode(GPIO.BOARD) # select the GPIO numbering scheme to use.
+GPIO.setup(12, GPIO.OUT)
+pwm_12 = GPIO.PWM(12, 50) #Sets pin 18 as a PWM output at 50 Hz.
+pwm_12.start(0) #Starts the PWM with a duty cycle of 100 (Duty cycle ranges between 0 and 10).
+
+
 def Launch_Car():
-    GPIO.setmode(GPIO.BOARD) # select the GPIO numbering scheme to use.
-    GPIO.setup(29, GPIO.OUT)
-    GPIO.setup(31, GPIO.OUT)
-    GPIO.setup(33, GPIO.OUT)
-    pwm29 = GPIO.PWM(29, 100)
-    pwm31 = GPIO.PWM(31, 100)
-    pwm29.start(0)
-    pwm31.start(0)
-    GPIO.output(33, True)
-    GPIO.setmode(GPIO.BOARD) # select the GPIO numbering scheme to use.
-    GPIO.setup(12, GPIO.OUT)
-    pwm_12 = GPIO.PWM(12, 50) #Sets pin 18 as a PWM output at 50 Hz.
-    pwm_12.start(0) #Starts the PWM with a duty cycle of 100 (Duty cycle ranges between 0 and 10).
 
     ts = 0.02
     time.sleep(0.02)
