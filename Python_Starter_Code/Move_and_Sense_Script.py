@@ -39,9 +39,9 @@ def Launch_Car():
             steps += 1
             Stop(pwm29,pwm31,ts)
             TurnRight(pwm_12,ts)
-            Reverse(pwm31,0.5,15)
+            Reverse(pwm31,1,20)
             TurnLeft(pwm_12,ts)
-            Forward(pwm29,0.5,15)
+            Forward(pwm29,1,20)
             Stop(pwm29,pwm31,ts)
             TurnStraight(pwm_12,ts)
             distance = DistanceSense('cm')
