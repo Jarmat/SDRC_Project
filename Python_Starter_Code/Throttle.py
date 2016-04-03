@@ -43,4 +43,6 @@ Stop(1)
 for x in range(5):
     Reverse(1,20)
 
-Clean()
+pwm29.stop()
+pwm31.stop()
+GPIO.cleanup()
