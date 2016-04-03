@@ -35,14 +35,14 @@ def Throttle_Clean():
     return;
 
 
-for x in range (5):
-    Forward(1,20)
-
-Stop(1)
-
-for x in range(5):
-    Reverse(1,20)
-
-pwm29.stop()
-pwm31.stop()
-GPIO.cleanup()
+# for x in range (5):
+#     Forward(1,20)
+#
+# Stop(1)
+#
+# for x in range(5):
+#     Reverse(1,20)
+#
+# pwm29.stop()
+# pwm31.stop()
+# GPIO.cleanup()
