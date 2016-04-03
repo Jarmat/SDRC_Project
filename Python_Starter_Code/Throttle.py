@@ -26,6 +26,7 @@ def Stop(pwm29,pwm31,ts):
     pwm29.ChangeDutyCycle(0)
     pwm31.ChangeDutyCycle(0)
     GPIO.output(33, True)
+    time.sleep(ts)
     return;
 
 def Throttle_Clean():
