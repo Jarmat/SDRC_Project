@@ -1,18 +1,15 @@
 import RPi.GPIO as GPIO
 import time
 
-def Throttle_Init():
-    GPIO.setmode(GPIO.BOARD) # select the GPIO numbering scheme to use.
-    GPIO.setup(29, GPIO.OUT)
-    GPIO.setup(31, GPIO.OUT)
-    GPIO.setup(33, GPIO.OUT)
-    pwm29 = GPIO.PWM(29, 100)
-    pwm31 = GPIO.PWM(31, 100)
-    pwm29.start(0)
-    pwm31.start(0)
-    GPIO.output(33, True)
-
-    return;
+GPIO.setmode(GPIO.BOARD) # select the GPIO numbering scheme to use.
+GPIO.setup(29, GPIO.OUT)
+GPIO.setup(31, GPIO.OUT)
+GPIO.setup(33, GPIO.OUT)
+pwm29 = GPIO.PWM(29, 100)
+pwm31 = GPIO.PWM(31, 100)
+pwm29.start(0)
+pwm31.start(0)
+GPIO.output(33, True)
 
 def Forward(ts,velocity):
     pwm31.ChangeDutyCycle(velocity)
