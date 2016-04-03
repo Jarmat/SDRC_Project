@@ -54,6 +54,7 @@ def Launch_Car():
 
         while distance > 30:
             Forward(pwm29,ts, 20)
+            distance = DistanceSense('cm')
 
 
     pwm29.stop()

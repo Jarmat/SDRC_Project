@@ -11,7 +11,6 @@ def DistanceSense(units):
     GPIO.setmode(GPIO.BOARD)
     GPIO.setup(35, GPIO.IN)
     GPIO.setup(37, GPIO.OUT)
-    print units
 
     time.sleep(0.02)
 
