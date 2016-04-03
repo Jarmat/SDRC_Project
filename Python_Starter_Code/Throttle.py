@@ -11,17 +11,17 @@ pwm29.start(0)
 pwm31.start(0)
 GPIO.output(33, True)
 
-def Forward(ts,velocity):
+def Forward(pwm29,ts,velocity):
     pwm29.ChangeDutyCycle(velocity)
     time.sleep(ts)
     return;
 
-def Reverse(ts,velocity):
+def Reverse(pwm31,ts,velocity):
     pwm31.ChangeDutyCycle(velocity)
     time.sleep(ts)
     return;
 
-def Stop(ts):
+def Stop(pwm29,pwm31,ts):
     GPIO.output(33, False)
     pwm29.ChangeDutyCycle(0)
     pwm31.ChangeDutyCycle(0)

@@ -8,19 +8,19 @@ def Turn_Init():
     pwm_12.start(0) #Starts the PWM with a duty cycle of 100 (Duty cycle ranges between 0 and 10).
     return;
 
-def TurnLeft(ts):
+def TurnLeft(pwm_12,ts):
     pwm_12.ChangeDutyCycle(12)
     time.sleep(ts)
 
     return;
 
-def TurnRight(ts):
+def TurnRight(pwm_12,ts):
     pwm_12.ChangeDutyCycle(1.5)
     time.sleep(ts)
 
     return;
 
-def TurnStraight(ts):
+def TurnStraight(pwm_12,ts):
     pwm_12.ChangeDutyCycle(9)
     time.sleep(ts)
 

@@ -37,13 +37,13 @@ def Launch_Car():
 
         while distance < 5:
             steps += 1
+            Stop(pwm29,pwm31,ts)
+            TurnRight(pwm_12,ts)
+            Reverse(pwm31,0.5,15)
+            TurnLeft(pwm_12,ts)
+            Forward(pwm29,0.5,15)
             Stop(ts)
-            TurnRight(ts)
-            Reverse(0.5,15)
-            TurnLeft(ts)
-            Forward(0.5,15)
-            Stop(ts)
-            TurnStraight(ts)
+            TurnStraight(pwm_12,ts)
             distance = DistanceSense('cm')
             if steps > 4:
                 print "I'm stuck!  Exiting code..."
@@ -53,7 +53,7 @@ def Launch_Car():
             break
 
         while distance > 30:
-            Forward(ts, 20)
+            Forward(pwm29,ts, 20)
             distance = DistanceSense('cm')
 
 
