@@ -49,3 +49,5 @@ def Launch_Car():
     GPIO.cleanup()
 
     return;
+
+Launch_Car()
