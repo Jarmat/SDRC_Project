@@ -11,12 +11,12 @@ def DistanceSense(units):
 
     print units
 
-    GPIO.output(35, False)
+    GPIO.output(37, False)
 
-    while GPIO.input(37) == 0:
+    while GPIO.input(35) == 0:
         nosig = time.time()
 
-    while GPIO.input(37) == 1:
+    while GPIO.input(35) == 1:
         sig = time.time()
 
     tl = sig - nosig
