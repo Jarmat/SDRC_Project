@@ -13,7 +13,7 @@ def DistanceSense(units):
     GPIO.setup(37, GPIO.OUT)
     print units
 
-    GPIO.output(37, False)
+    GPIO.output(37, True)
 
     while GPIO.input(35) == 0:
         nosig = time.time()
@@ -25,10 +25,8 @@ def DistanceSense(units):
 
     if units == 'cm':
         distance = tl/0.000058
-        print 'Distancs is ', distance
     elif units == 'in':
         distance = tl/0.000148
-        print 'Distancs is ', distance
     else:
         print('Use either cm or in for units.')
         distance = None
