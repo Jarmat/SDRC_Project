@@ -14,6 +14,7 @@ def Launch_Car():
     while True:
 
         distance = DistanceSense('cm')
+        print distance
 
         if distance == None:
             print "Error detected, stopping code."
