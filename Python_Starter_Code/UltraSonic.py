@@ -15,6 +15,10 @@ def DistanceSense(units):
 
     GPIO.output(37, True)
 
+    time.sleep(0.00001)
+
+    GPIO.output(37, False)
+
     while GPIO.input(35) == 0:
         nosig = time.time()
 
