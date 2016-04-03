@@ -19,7 +19,6 @@ GPIO.setup(12, GPIO.OUT)
 pwm_12 = GPIO.PWM(12, 50) #Sets pin 18 as a PWM output at 50 Hz.
 pwm_12.start(0) #Starts the PWM with a duty cycle of 100 (Duty cycle ranges between 0 and 10).
 
-
 def Launch_Car():
 
     ts = 0.02
