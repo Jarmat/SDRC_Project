@@ -35,8 +35,6 @@ def Throttle_Clean():
     return;
 
 
-Throttle_Init()
-
 for x in range (5):
     Forward(1,20)
 
