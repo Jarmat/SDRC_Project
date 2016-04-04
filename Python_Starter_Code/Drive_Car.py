@@ -42,6 +42,14 @@ def key_input(event):
     else:
         TurnStraight(pwm_12,ts)
 
+    distance = DistanceSense('cm')
+
+    if distancs > 50:
+        Stop(pwm29,pwm31,ts)
+        time.sleep(ts)
+        Reverse(pwm31,1, velocity)
+
+
 
 command = tk.TK()
 command.blind('<KeyPress>', key_input)
