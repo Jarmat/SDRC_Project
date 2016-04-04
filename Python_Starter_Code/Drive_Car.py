@@ -51,6 +51,6 @@ def key_input(event):
 
 
 
-command = tk.TK()
+command = tk.Tk()
 command.blind('<KeyPress>', key_input)
 command.mainloop()
