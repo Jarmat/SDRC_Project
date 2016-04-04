@@ -1,5 +1,6 @@
 import RPi.GPIO as GPIO
 import time
+import syse
 import Tkinter as tk
 
 from Throttle import Forward, Reverse, Stop
@@ -28,17 +29,17 @@ def key_input(event):
     ts = 0.03
     velocity = 80
 
-    if key_press.lower() == w:
+    if key_press.lower() == 'w':
         Forward(pwm29,ts, velocity)
-    elif key_press.lower() == s:
+    elif key_press.lower() == 's':
         Reverse(pwm31,ts, velocity)
     else:
         Stop(pwm29,pwm31,ts)
 
-    if key_press.lower() == a:
+    if key_press.lower() == 'a':
         TurnLeft(pwm12,ts)
-    elif key_press.lower() == a:
-            TurnLeft(pwm12,ts)
+    elif key_press.lower() == 'd':
+        TurnRight(pwm12,ts)
     else:
         TurnStraight(pwm_12,ts)
 
