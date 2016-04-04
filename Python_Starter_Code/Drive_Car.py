@@ -1,6 +1,6 @@
 import RPi.GPIO as GPIO
 import time
-import syse
+import sys
 import Tkinter as tk
 
 from Throttle import Forward, Reverse, Stop
