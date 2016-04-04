@@ -37,15 +37,15 @@ def key_input(event):
         Stop(pwm29,pwm31,ts)
 
     if key_press.lower() == 'a':
-        TurnLeft(pwm12,ts)
+        TurnLeft(pwm_12,ts)
     elif key_press.lower() == 'd':
-        TurnRight(pwm12,ts)
+        TurnRight(pwm_12,ts)
     else:
         TurnStraight(pwm_12,ts)
 
     distance = DistanceSense('cm')
 
-    if distancs > 50:
+    if distance > 50:
         Stop(pwm29,pwm31,ts)
         time.sleep(ts)
         Reverse(pwm31,1, velocity)
