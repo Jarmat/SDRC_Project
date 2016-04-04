@@ -45,7 +45,7 @@ def key_input(event):
 
     distance = DistanceSense('cm')
 
-    if distance > 50:
+    if distance < 50:
         Stop(pwm29,pwm31,ts)
         time.sleep(ts)
         Reverse(pwm31,1, velocity)
