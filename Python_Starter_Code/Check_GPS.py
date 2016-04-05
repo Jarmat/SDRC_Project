@@ -13,6 +13,7 @@ while True:
         if report['class'] == 'TPV':
             if hasattr(report, 'time'):
                 print report.time
+	print 'DONE!'
     except KeyError:
 		pass
     except KeyboardInterrupt:
