@@ -14,7 +14,5 @@ def Laser_On(ts):
 
 
 while True:
-    Laser_On(0.01)
-    time.sleep(0.9)
-
-    
+    Laser_On(0.02)
+    time.sleep(0.2)
