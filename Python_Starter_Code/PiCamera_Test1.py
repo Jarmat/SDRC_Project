@@ -21,6 +21,7 @@ with picamera.PiCamera() as camera:
                 Laser_Off()
                 stop = time.time()
                 print stop-start
+                output.truncate(0)
         except KeyboardInterrupt:
             print 'Quit'
             Laser_Off()
