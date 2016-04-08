@@ -17,7 +17,7 @@ def Laser_On(ts):
 try:
     while True:
         Laser_On(0.02)
-        time.sleep(0.2)
+        time.sleep(0.02)
 except KeyboardInterrupt:
     print 'Quit'
     GPIO.cleanup()
