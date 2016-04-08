@@ -4,24 +4,25 @@ import picamera.array
 from Laser import Laser_On, Laser_Off
 
 with picamera.PiCamera() as camera:
-    with picamera.array.PiRGBArray(camera) as output:
-        # camera.led = False
-        camera.shutter_speed = 100
-        camera.resolution = (640, 480)
-        camera.start_preview()
-        # Camera warm-up time
-        time.sleep(2)
+    # with picamera.array.PiRGBArray(camera) as output:
+    # camera.led = False
+    camera.shutter_speed = 100
+    camera.resolution = (640, 480)
+    camera.start_preview()
+    # Camera warm-up time
+    time.sleep(2)
 
 
         try:
             for x in range(10):
                 start = time.time()
                 Laser_On()
-                camera.capture(output, format='rgb')
+                # camera.capture(output, format='rgb')
+                camera.capture('foo.jpg')
                 Laser_Off()
                 stop = time.time()
                 print stop-start
-                output.truncate(0)
+                # output.truncate(0)
         except KeyboardInterrupt:
             print 'Quit'
             Laser_Off()
