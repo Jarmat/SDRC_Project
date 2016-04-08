@@ -13,6 +13,11 @@ def Laser_On(ts):
     return;
 
 
-while True:
-    Laser_On(0.02)
-    time.sleep(0.2)
+
+try:
+    while True:
+        Laser_On(0.02)
+        time.sleep(0.2)
+except KeyboardInterrupt:
+    print "Quit"
+    GPIO.cleanup()
