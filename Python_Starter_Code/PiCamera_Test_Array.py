@@ -2,7 +2,7 @@ import time
 import picamera
 import picamera.array
 
-from Laser.py import Laser_On
+from Laser import Laser_On
 
 with picamera.PiCamera() as camera:
     with picamera.array.PiRGBArray(camera) as output:
