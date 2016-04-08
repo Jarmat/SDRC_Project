@@ -14,15 +14,17 @@ with picamera.PiCamera() as camera:
 
 
     try:
+        start = time.time()
         for x in range(10):
-            start = time.time()
+
             Laser_On()
             # camera.capture(output, format='rgb')
             camera.capture('foo.jpg')
             Laser_Off()
             stop = time.time()
-            print stop-start
+
             # output.truncate(0)
+        print time.time()-start/10
     except KeyboardInterrupt:
         print 'Quit'
         Laser_Off()
