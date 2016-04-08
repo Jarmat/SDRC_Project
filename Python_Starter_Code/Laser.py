@@ -19,5 +19,5 @@ try:
         Laser_On(0.02)
         time.sleep(0.2)
 except KeyboardInterrupt:
-    print "Quit"
+    print 'Quit'
     GPIO.cleanup()
