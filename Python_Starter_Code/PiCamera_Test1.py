@@ -6,7 +6,7 @@ from Laser import Laser_On, Laser_Off
 with picamera.PiCamera() as camera:
     with picamera.array.PiRGBArray(camera) as output:
         # camera.led = False
-        # camera.shutter_speed = 250
+        camera.shutter_speed = 100
         camera.resolution = (640, 480)
         camera.start_preview()
         # Camera warm-up time
