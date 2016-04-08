@@ -13,7 +13,7 @@ def Laser_Blink(ts):
     return;
 
 def Laser_On():
-    #GPIO.setmode(GPIO.BOARD)
+    GPIO.setmode(GPIO.BOARD)
     GPIO.setup(13, GPIO.OUT)
 
     GPIO.output(13, True)
