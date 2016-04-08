@@ -8,5 +8,6 @@ with picamera.PiCamera() as camera:
         time.sleep(2)
         camera.resolution = (640, 480)
         camera.capture(output, format='rgb')
+        print output
         print('Captured %dx%d image' % (
                 output.array.shape[1], output.array.shape[0]))
