@@ -1,0 +1,20 @@
+<dictwrapper: 
+{u'epx': 2.998,
+u'epy': 3.261,
+u'epv': 11.385,
+u'ept': 0.005,
+u'lon': -95.422218333,
+u'eps': 6.52,
+u'epc': 22.77,
+u'lat': 29.702538333,
+u'tag': u'RMC',
+u'track': 279.59,
+u'mode': 3,
+u'time': u'2016-04-05T00:34:20.000Z',
+u'device': u'/dev/ttyUSB0',
+u'climb': 0.0,
+u'alt': 23.6,
+u'speed': 0.005,
+u'class': u'TPV'}>
+
+2016-04-05T00:34:20.000Z
