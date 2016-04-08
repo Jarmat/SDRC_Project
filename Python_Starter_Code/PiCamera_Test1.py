@@ -12,7 +12,7 @@ with picamera.PiCamera() as camera:
 
 
     try:
-        while True:
+        for x in range(10)
             start = time.time()
             Laser_On()
             camera.capture('foo.jpg')
