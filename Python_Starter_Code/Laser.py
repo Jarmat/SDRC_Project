@@ -2,16 +2,25 @@ import RPi.GPIO as GPIO
 import time
 
 
-def Laser_On(ts):
+def Laser_Blink(ts):
     GPIO.setmode(GPIO.BOARD)
     GPIO.setup(13, GPIO.OUT)
 
     GPIO.output(13, True)
     time.sleep(ts)
     GPIO.output(13,False)
-
+    GPOP.cleanup()
     return;
 
+def Laser_On():
+    GPIO.setmode(GPIO.BOARD)
+    GPIO.setup(13, GPIO.OUT)
+
+    GPIO.output(13, True)
+
+def Laser_Off():
+    GPIO.output(13,False)
+    GPOP.cleanup()
 
 
 try:
