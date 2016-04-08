@@ -12,9 +12,12 @@ with picamera.PiCamera() as camera:
 
     try:
         while True:
+            start = time.time()
             Laser_On()
             camera.capture('foo.jpg')
             Laser_Off()
+            stop = time.time()
+            print stop-start
     except KeyboardInterrupt:
         print 'Quit'
         Laser_Off()
