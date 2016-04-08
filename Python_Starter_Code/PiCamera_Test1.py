@@ -1,5 +1,6 @@
 import time
 import picamera
+import picamera.array
 from Laser import Laser_On, Laser_Off
 
 with picamera.PiCamera() as camera:
