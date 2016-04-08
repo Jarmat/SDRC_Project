@@ -20,9 +20,9 @@ def Laser_On():
 
 def Laser_Off():
     GPIO.output(13,False)
-    GPOP.cleanup()
+    GPIO.cleanup()
 
-# 
+#
 # try:
 #     while True:
 #         Laser_On(0.02)
