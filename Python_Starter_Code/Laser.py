@@ -25,7 +25,7 @@ def Laser_Off():
 
 try:
     while True:
-        Laser_Blink(0.02)
+        Laser_Blink(0.01)
         time.sleep(0.2)
 except KeyboardInterrupt:
     print 'Quit'
