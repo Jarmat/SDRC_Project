@@ -9,7 +9,7 @@ def Laser_Blink(ts):
     GPIO.output(13, True)
     time.sleep(ts)
     GPIO.output(13,False)
-    GPOP.cleanup()
+    GPIO.cleanup()
     return;
 
 def Laser_On():
