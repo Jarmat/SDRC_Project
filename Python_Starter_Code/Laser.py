@@ -22,11 +22,11 @@ def Laser_Off():
     GPIO.output(13,False)
     GPIO.cleanup()
 
-#
-# try:
-#     while True:
-#         Laser_On(0.02)
-#         time.sleep(0.02)
-# except KeyboardInterrupt:
-#     print 'Quit'
-#     GPIO.cleanup()
+
+try:
+    while True:
+        Laser_On(0.02)
+        time.sleep(0.2)
+except KeyboardInterrupt:
+    print 'Quit'
+    GPIO.cleanup()
